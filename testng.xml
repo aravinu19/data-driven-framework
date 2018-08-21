@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="EnQuodeTestSuite" thread-count="5" group-by-instances="false" verbose="1" allow-return-values="false" parallel="none" data-provider-thread-count="10" junit="false" configfailurepolicy="skip" preserve-order="true" skipfailedinvocationcounts="false">
+
+  <test verbose="2" name="Test For Broken Links">
+    <classes>
+      <class name="testCases.SiteNavigationTest"/>
+    </classes>
+  </test> <!-- Default test -->
+  
+  <test verbose="2" name="Testing Flight Cancelling Functionality">
+  	<classes>
+  		<class name="testCases.CancellingReservationTest"/>
+  	</classes>
+  </test>
+  
+  <test verbose="2" name="Testing LogIn Functionality">
+  	<classes>
+  		<class name="testCases.logInTest"/>
+  	</classes>
+  </test>
+  
+  <test verbose="2" name="Testing Registration Functionality">
+  	<classes>
+  		<class name="testCases.RegistrationTest"/>
+  	</classes>
+  </test>
+  
+  <test verbose="2" name="Testing Flight Reservation Functionality">
+  	<classes>
+  		<class name="testCases.FlightReservationTest"/>
+  	</classes>
+  </test>
+  
+  <test verbose="2" name="Testing Chain of Functions SignUp and SignIn">
+  	<classes>
+  		<class name="testCases.SignUpAndSignInTest"/>
+  	</classes>
+  </test>
+  
+  <test verbose="2" name="Testing Chain of Functions Reservation and Cancellation">
+  	<classes>
+  		<class name="testCases.ReservationAndCancellationTest"/>
+  	</classes>
+  </test>
+
+</suite> <!-- EnQuodeTestSuite -->

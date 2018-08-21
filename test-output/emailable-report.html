@@ -1,0 +1,995 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG:  Unit Test</title>
+<style type="text/css">
+table caption,table.info_table,table.result,table.passed,table.failed {margin-bottom:10px;border:1px solid #000099;border-collapse:collapse;empty-cells:show;}
+table.info_table td,table.info_table th,table.result td,table.result th,table.passed td,table.passed th,table.failed td,table.failed th {
+border:1px solid #000099;padding:.25em .5em .25em .5em
+}
+table.result th {vertical-align:bottom}
+tr.param th {padding-left:1em;padding-right:1em}
+tr.param td {padding-left:.5em;padding-right:2em}
+td.numi,th.numi,td.numi_attn {
+text-align:right
+}
+tr.total td {font-weight:bold}
+table caption {
+text-align:center;font-weight:bold;
+}
+table.passed tr.stripe td,table tr.passedodd td {background-color: #00AA00;}
+table.passed td,table tr.passedeven td {background-color: #33FF33;}
+table.passed tr.stripe td,table tr.skippedodd td {background-color: #cccccc;}
+table.passed td,table tr.skippedodd td {background-color: #dddddd;}
+table.failed tr.stripe td,table tr.failedodd td,table.result td.numi_attn {background-color: #FF3333;}
+table.failed td,table tr.failedeven td,table.result tr.stripe td.numi_attn {background-color: #DD0000;}
+tr.stripe td,tr.stripe th {background-color: #E6EBF9;}
+p.totop {font-size:85%;text-align:center;border-bottom:2px black solid}
+div.shootout {padding:2em;border:3px #4854A8 solid}
+</style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em">Test For Broken Links</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">12</td><td class="numi">0</td><td class="numi">36.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em">Testing Flight Cancelling Functionality</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">0.2 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Testing LogIn Functionality</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">0.9 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em">Testing Registration Functionality</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">0.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Testing Flight Reservation Functionality</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">0.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em">Testing Chain of Functions SignUp and SignIn</td><td class="numi">24</td><td class="numi">13</td><td class="numi">0</td><td class="numi_attn">24</td><td class="numi">749.6 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Testing Chain of Functions Reservation and Cancellation</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">6</td><td class="numi">39.5 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="total"><td>Total</td>
+<td class="numi">24</td><td class="numi">13</td><td class="numi_attn">12</td><td class="numi_attn">34</td><td class="numi">827.1 seconds</td><td colspan="2">&nbsp;</td></tr>
+</table>
+<table cellspacing="0" cellpadding="0" class="passed" id="summary">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">Test For Broken Links &#8212; failed (configuration methods)</th></tr>
+<tr class="failedodd"><td rowspan="1">testCases.SiteNavigationTest</td><td><a href="#m1"><b>beginTest</b>  </a></td><td class="numi">1</td><td>1533127389985</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Test For Broken Links &#8212; skipped (configuration methods)</th></tr>
+<tr class="skippedodd"><td rowspan="1">testCases.SiteNavigationTest</td><td><a href="#m2"><b>cleanUp</b>  </a></td><td class="numi">1</td><td>1533127426388</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Test For Broken Links &#8212; skipped</th></tr>
+<tr class="skippedodd"><td rowspan="12">testCases.SiteNavigationTest</td><td><a href="#m3"><b>HomeLink</b>  </a></td><td class="numi">1</td><td>1533127424067</td><td class="numi">16</td></tr><tr class="skippedodd"><td><a href="#m4"><b>FlightsLink</b>  </a></td><td class="numi">1</td><td>1533127424320</td><td class="numi">5</td></tr><tr class="skippedodd"><td><a href="#m5"><b>HotelsLink</b>  </a></td><td class="numi">1</td><td>1533127424548</td><td class="numi">4</td></tr><tr class="skippedodd"><td><a href="#m6"><b>CarRentalsLink</b>  </a></td><td class="numi">1</td><td>1533127424733</td><td class="numi">5</td></tr><tr class="skippedodd"><td><a href="#m7"><b>CruisesLink</b>  </a></td><td class="numi">1</td><td>1533127424921</td><td class="numi">3</td></tr><tr class="skippedodd"><td><a href="#m8"><b>DestinationsLink</b>  </a></td><td class="numi">1</td><td>1533127425099</td><td class="numi">5</td></tr><tr class="skippedodd"><td><a href="#m9"><b>VacationsLink</b>  </a></td><td class="numi">1</td><td>1533127425287</td><td class="numi">5</td></tr><tr class="skippedodd"><td><a href="#m10"><b>RegistrationLink</b>  </a></td><td class="numi">1</td><td>1533127425466</td><td class="numi">5</td></tr><tr class="skippedodd"><td><a href="#m11"><b>SupportLink</b>  </a></td><td class="numi">1</td><td>1533127425653</td><td class="numi">3</td></tr><tr class="skippedodd"><td><a href="#m12"><b>ContactLink</b>  </a></td><td class="numi">1</td><td>1533127425832</td><td class="numi">4</td></tr><tr class="skippedodd"><td><a href="#m13"><b>ProfilePage</b>  </a></td><td class="numi">1</td><td>1533127426017</td><td class="numi">6</td></tr><tr class="skippedodd"><td><a href="#m14"><b>ItineraryPage</b>  </a></td><td class="numi">1</td><td>1533127426199</td><td class="numi">4</td></tr>
+<tr><th colspan="4">Testing Flight Cancelling Functionality &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">testCases.CancellingReservationTest</td><td><a href="#m15"><b>Cancellation</b>  </a></td><td class="numi">1</td><td>1533127426445</td><td class="numi">3</td></tr>
+<tr><th colspan="4">Testing LogIn Functionality &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">testCases.logInTest</td><td><a href="#m16"><b>logIn</b>  </a></td><td class="numi">1</td><td>1533127426666</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Testing Registration Functionality &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">testCases.RegistrationTest</td><td><a href="#m17"><b>Register</b>  </a></td><td class="numi">1</td><td>1533127427567</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Testing Flight Reservation Functionality &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">testCases.FlightReservationTest</td><td><a href="#m18"><b>Reservation</b>  </a></td><td class="numi">1</td><td>1533127427609</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Testing Chain of Functions SignUp and SignIn &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="24">testCases.SignUpAndSignInTest</td><td><a href="#m19"><b>SignUp</b>  </a></td><td class="numi">1</td><td>1533127628427</td><td class="numi">21785</td></tr><tr class="failedodd"><td><a href="#m20"><b>SignUp</b>  </a></td><td class="numi">1</td><td>1533127628427</td><td class="numi">21785</td></tr><tr class="failedodd"><td><a href="#m21"><b>SignUp</b>  </a></td><td class="numi">1</td><td>1533127628427</td><td class="numi">21785</td></tr><tr class="failedodd"><td><a href="#m22"><b>SignUp</b>  </a></td><td class="numi">1</td><td>1533127628427</td><td class="numi">21785</td></tr><tr class="failedodd"><td><a href="#m23"><b>SignUp</b>  </a></td><td class="numi">1</td><td>1533127628427</td><td class="numi">21785</td></tr><tr class="failedodd"><td><a href="#m24"><b>SignUp</b>  </a></td><td class="numi">1</td><td>1533127628427</td><td class="numi">21785</td></tr><tr class="failedodd"><td><a href="#m25"><b>SignUp</b>  </a></td><td class="numi">1</td><td>1533127628427</td><td class="numi">21785</td></tr><tr class="failedodd"><td><a href="#m26"><b>SignUp</b>  </a></td><td class="numi">1</td><td>1533127628427</td><td class="numi">21785</td></tr><tr class="failedodd"><td><a href="#m27"><b>SignUp</b>  </a></td><td class="numi">1</td><td>1533127628427</td><td class="numi">21785</td></tr><tr class="failedodd"><td><a href="#m28"><b>SignUp</b>  </a></td><td class="numi">1</td><td>1533127628427</td><td class="numi">21785</td></tr><tr class="failedodd"><td><a href="#m29"><b>SignUp</b>  </a></td><td class="numi">1</td><td>1533127628427</td><td class="numi">21785</td></tr><tr class="failedodd"><td><a href="#m30"><b>SignUp</b>  </a></td><td class="numi">1</td><td>1533127628427</td><td class="numi">21785</td></tr><tr class="failedodd"><td><a href="#m31"><b>SignIn</b>  </a></td><td class="numi">10</td><td>1533127654544</td><td class="numi">520545</td></tr><tr class="failedodd"><td><a href="#m32"><b>SignIn</b>  </a></td><td class="numi">10</td><td>1533127654544</td><td class="numi">520545</td></tr><tr class="failedodd"><td><a href="#m33"><b>SignIn</b>  </a></td><td class="numi">10</td><td>1533127654544</td><td class="numi">520545</td></tr><tr class="failedodd"><td><a href="#m34"><b>SignIn</b>  </a></td><td class="numi">10</td><td>1533127654544</td><td class="numi">520545</td></tr><tr class="failedodd"><td><a href="#m35"><b>SignIn</b>  </a></td><td class="numi">10</td><td>1533127654544</td><td class="numi">520545</td></tr><tr class="failedodd"><td><a href="#m36"><b>SignIn</b>  </a></td><td class="numi">10</td><td>1533127654544</td><td class="numi">520545</td></tr><tr class="failedodd"><td><a href="#m37"><b>SignIn</b>  </a></td><td class="numi">10</td><td>1533127654544</td><td class="numi">520545</td></tr><tr class="failedodd"><td><a href="#m38"><b>SignIn</b>  </a></td><td class="numi">10</td><td>1533127654544</td><td class="numi">520545</td></tr><tr class="failedodd"><td><a href="#m39"><b>SignIn</b>  </a></td><td class="numi">10</td><td>1533127654544</td><td class="numi">520545</td></tr><tr class="failedodd"><td><a href="#m40"><b>SignIn</b>  </a></td><td class="numi">10</td><td>1533127654544</td><td class="numi">520545</td></tr><tr class="failedodd"><td><a href="#m41"><b>SignIn</b>  </a></td><td class="numi">10</td><td>1533127654544</td><td class="numi">520545</td></tr><tr class="failedodd"><td><a href="#m42"><b>SignIn</b>  </a></td><td class="numi">10</td><td>1533127654544</td><td class="numi">520545</td></tr>
+<tr><th colspan="4">Testing Chain of Functions SignUp and SignIn &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="24">testCases.SignUpAndSignInTest</td><td><a href="#m43"><b>SignUp</b>  </a></td><td class="numi">11</td><td>1533127431740</td><td class="numi">222777</td></tr><tr class="passedodd"><td><a href="#m44"><b>SignUp</b>  </a></td><td class="numi">11</td><td>1533127431740</td><td class="numi">222777</td></tr><tr class="passedodd"><td><a href="#m45"><b>SignUp</b>  </a></td><td class="numi">11</td><td>1533127431740</td><td class="numi">222777</td></tr><tr class="passedodd"><td><a href="#m46"><b>SignUp</b>  </a></td><td class="numi">11</td><td>1533127431740</td><td class="numi">222777</td></tr><tr class="passedodd"><td><a href="#m47"><b>SignUp</b>  </a></td><td class="numi">11</td><td>1533127431740</td><td class="numi">222777</td></tr><tr class="passedodd"><td><a href="#m48"><b>SignUp</b>  </a></td><td class="numi">11</td><td>1533127431740</td><td class="numi">222777</td></tr><tr class="passedodd"><td><a href="#m49"><b>SignUp</b>  </a></td><td class="numi">11</td><td>1533127431740</td><td class="numi">222777</td></tr><tr class="passedodd"><td><a href="#m50"><b>SignUp</b>  </a></td><td class="numi">11</td><td>1533127431740</td><td class="numi">222777</td></tr><tr class="passedodd"><td><a href="#m51"><b>SignUp</b>  </a></td><td class="numi">11</td><td>1533127431740</td><td class="numi">222777</td></tr><tr class="passedodd"><td><a href="#m52"><b>SignUp</b>  </a></td><td class="numi">11</td><td>1533127431740</td><td class="numi">222777</td></tr><tr class="passedodd"><td><a href="#m53"><b>SignUp</b>  </a></td><td class="numi">11</td><td>1533127431740</td><td class="numi">222777</td></tr><tr class="passedodd"><td><a href="#m54"><b>SignUp</b>  </a></td><td class="numi">11</td><td>1533127431740</td><td class="numi">222777</td></tr><tr class="passedodd"><td><a href="#m55"><b>SignIn</b>  </a></td><td class="numi">2</td><td>1533127837114</td><td class="numi">93124</td></tr><tr class="passedodd"><td><a href="#m56"><b>SignIn</b>  </a></td><td class="numi">2</td><td>1533127837114</td><td class="numi">93124</td></tr><tr class="passedodd"><td><a href="#m57"><b>SignIn</b>  </a></td><td class="numi">2</td><td>1533127837114</td><td class="numi">93124</td></tr><tr class="passedodd"><td><a href="#m58"><b>SignIn</b>  </a></td><td class="numi">2</td><td>1533127837114</td><td class="numi">93124</td></tr><tr class="passedodd"><td><a href="#m59"><b>SignIn</b>  </a></td><td class="numi">2</td><td>1533127837114</td><td class="numi">93124</td></tr><tr class="passedodd"><td><a href="#m60"><b>SignIn</b>  </a></td><td class="numi">2</td><td>1533127837114</td><td class="numi">93124</td></tr><tr class="passedodd"><td><a href="#m61"><b>SignIn</b>  </a></td><td class="numi">2</td><td>1533127837114</td><td class="numi">93124</td></tr><tr class="passedodd"><td><a href="#m62"><b>SignIn</b>  </a></td><td class="numi">2</td><td>1533127837114</td><td class="numi">93124</td></tr><tr class="passedodd"><td><a href="#m63"><b>SignIn</b>  </a></td><td class="numi">2</td><td>1533127837114</td><td class="numi">93124</td></tr><tr class="passedodd"><td><a href="#m64"><b>SignIn</b>  </a></td><td class="numi">2</td><td>1533127837114</td><td class="numi">93124</td></tr><tr class="passedodd"><td><a href="#m65"><b>SignIn</b>  </a></td><td class="numi">2</td><td>1533127837114</td><td class="numi">93124</td></tr><tr class="passedodd"><td><a href="#m66"><b>SignIn</b>  </a></td><td class="numi">2</td><td>1533127837114</td><td class="numi">93124</td></tr>
+<tr><th colspan="4">Testing Chain of Functions Reservation and Cancellation &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="6">testCases.ReservationAndCancellationTest</td><td><a href="#m67"><b>ReservationAndCancellation</b>  </a></td><td class="numi">6</td><td>1533128180837</td><td class="numi">35459</td></tr><tr class="failedodd"><td><a href="#m68"><b>ReservationAndCancellation</b>  </a></td><td class="numi">6</td><td>1533128180837</td><td class="numi">35459</td></tr><tr class="failedodd"><td><a href="#m69"><b>ReservationAndCancellation</b>  </a></td><td class="numi">6</td><td>1533128180837</td><td class="numi">35459</td></tr><tr class="failedodd"><td><a href="#m70"><b>ReservationAndCancellation</b>  </a></td><td class="numi">6</td><td>1533128180837</td><td class="numi">35459</td></tr><tr class="failedodd"><td><a href="#m71"><b>ReservationAndCancellation</b>  </a></td><td class="numi">6</td><td>1533128180837</td><td class="numi">35459</td></tr><tr class="failedodd"><td><a href="#m72"><b>ReservationAndCancellation</b>  </a></td><td class="numi">6</td><td>1533128180837</td><td class="numi">35459</td></tr>
+</table>
+<h1>Test For Broken Links</h1>
+<h2 id="m1">testCases.SiteNavigationTest:beginTest</h2>
+<div style="padding-left:3em">
+<p>No such element (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;
+System info: host: &apos;DESKTOP-O8T4ONJ&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {InPrivate: false, acceptSslCerts: true, applicationCacheEnabled: true, browserName: MicrosoftEdge, browserVersion: 42.17134.1.0, javascriptEnabled: true, locationContextEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10, takesElementScreenshot: true, takesScreenshot: true, webStorageEnabled: true}
+Session ID: 39B54133-BF75-4A07-879B-D93F4F0B7774
+*** Element info: {Using=link text, value=SIGN-OFF}</p>
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+<br/>at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:376)
+<br/>at org.openqa.selenium.By$ByLinkText.findElement(By.java:220)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+<br/>at pageHandler.Page.loginPage(Page.java:67)
+<br/>at testCases.SiteNavigationTest.beginTest(SiteNavigationTest.java:18)
+<br/>23 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">testCases.SiteNavigationTest:cleanUp</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">testCases.SiteNavigationTest:HomeLink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">testCases.SiteNavigationTest:ContactLink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">testCases.SiteNavigationTest:HotelsLink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">testCases.SiteNavigationTest:ProfilePage</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">testCases.SiteNavigationTest:CarRentalsLink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">testCases.SiteNavigationTest:RegistrationLink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">testCases.SiteNavigationTest:CruisesLink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">testCases.SiteNavigationTest:ItineraryPage</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m11">testCases.SiteNavigationTest:SupportLink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m12">testCases.SiteNavigationTest:VacationsLink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m13">testCases.SiteNavigationTest:FlightsLink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m14">testCases.SiteNavigationTest:DestinationsLink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>Testing Flight Cancelling Functionality</h1>
+<h2 id="m15">testCases.CancellingReservationTest:Cancellation</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>mercury</td>
+<td>mercury</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>null</p>
+testListeners.CancellingReservationTestListener.onTestStart(CancellingReservationTestListener.java:28)
+<br/>at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
+<br/>at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+<br/>at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
+<br/>at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+<br/>at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+<br/>at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+<br/>at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+<br/>at org.testng.TestRunner.privateRun(TestRunner.java:767)
+<br/>at org.testng.TestRunner.run(TestRunner.java:617)
+<br/>at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+<br/>at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+<br/>at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+<br/>at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+<br/>at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+<br/>at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+<br/>at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+<br/>at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+<br/>at org.testng.TestNG.run(TestNG.java:1031)
+<br/>at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+<br/>at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+<br/>at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+<br/>1 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>Testing LogIn Functionality</h1>
+<h2 id="m16">testCases.logInTest:logIn</h2>
+<div style="padding-left:3em">
+<p>java.lang.NullPointerException</p>
+org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:143)
+<br/>at org.testng.internal.Parameters.handleParameters(Parameters.java:426)
+<br/>at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
+<br/>at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
+<br/>at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
+<br/>at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+<br/>at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+<br/>at org.testng.TestRunner.privateRun(TestRunner.java:767)
+<br/>at org.testng.TestRunner.run(TestRunner.java:617)
+<br/>at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+<br/>at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+<br/>at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+<br/>at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+<br/>at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+<br/>at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+<br/>at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+<br/>at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+<br/>at org.testng.TestNG.run(TestNG.java:1031)
+<br/>at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+<br/>at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+<br/>at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+<br/>1 lines not shown
+<p>Caused by null</p>
+supportUtilities.PostGreSQLHandler.dataForLogIn(PostGreSQLHandler.java:247)
+<br/>at testCases.logInTest.LoginData(logInTest.java:20)
+<br/>at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+<br/>at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br/>at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+<br/>at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+<br/>at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:117)
+<br/>at org.testng.internal.Parameters.handleParameters(Parameters.java:426)
+<br/>at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
+<br/>at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
+<br/>at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
+<br/>at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+<br/>at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+<br/>at org.testng.TestRunner.privateRun(TestRunner.java:767)
+<br/>at org.testng.TestRunner.run(TestRunner.java:617)
+<br/>at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+<br/>at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+<br/>at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+<br/>at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+<br/>at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+<br/>at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+<br/>at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+<br/>at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+<br/>at org.testng.TestNG.run(TestNG.java:1031)
+<br/>at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+<br/>at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+<br/>at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+<br/>1 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>Testing Registration Functionality</h1>
+<h2 id="m17">testCases.RegistrationTest:Register</h2>
+<div style="padding-left:3em">
+<p>java.lang.NullPointerException</p>
+org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:143)
+<br/>at org.testng.internal.Parameters.handleParameters(Parameters.java:426)
+<br/>at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
+<br/>at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
+<br/>at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
+<br/>at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+<br/>at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+<br/>at org.testng.TestRunner.privateRun(TestRunner.java:767)
+<br/>at org.testng.TestRunner.run(TestRunner.java:617)
+<br/>at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+<br/>at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+<br/>at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+<br/>at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+<br/>at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+<br/>at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+<br/>at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+<br/>at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+<br/>at org.testng.TestNG.run(TestNG.java:1031)
+<br/>at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+<br/>at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+<br/>at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+<br/>1 lines not shown
+<p>Caused by null</p>
+supportUtilities.PostGreSQLHandler.dataForRegistration(PostGreSQLHandler.java:266)
+<br/>at testCases.RegistrationTest.RegistrationDataProvider(RegistrationTest.java:19)
+<br/>at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+<br/>at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br/>at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+<br/>at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+<br/>at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:117)
+<br/>at org.testng.internal.Parameters.handleParameters(Parameters.java:426)
+<br/>at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
+<br/>at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
+<br/>at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
+<br/>at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+<br/>at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+<br/>at org.testng.TestRunner.privateRun(TestRunner.java:767)
+<br/>at org.testng.TestRunner.run(TestRunner.java:617)
+<br/>at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+<br/>at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+<br/>at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+<br/>at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+<br/>at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+<br/>at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+<br/>at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+<br/>at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+<br/>at org.testng.TestNG.run(TestNG.java:1031)
+<br/>at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+<br/>at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+<br/>at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+<br/>1 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>Testing Flight Reservation Functionality</h1>
+<h2 id="m18">testCases.FlightReservationTest:Reservation</h2>
+<div style="padding-left:3em">
+<p>java.lang.NullPointerException</p>
+org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:143)
+<br/>at org.testng.internal.Parameters.handleParameters(Parameters.java:426)
+<br/>at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
+<br/>at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
+<br/>at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
+<br/>at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+<br/>at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+<br/>at org.testng.TestRunner.privateRun(TestRunner.java:767)
+<br/>at org.testng.TestRunner.run(TestRunner.java:617)
+<br/>at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+<br/>at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+<br/>at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+<br/>at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+<br/>at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+<br/>at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+<br/>at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+<br/>at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+<br/>at org.testng.TestNG.run(TestNG.java:1031)
+<br/>at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+<br/>at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+<br/>at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+<br/>1 lines not shown
+<p>Caused by null</p>
+supportUtilities.PostGreSQLHandler.dataForReservation(PostGreSQLHandler.java:302)
+<br/>at testCases.FlightReservationTest.reservationData(FlightReservationTest.java:19)
+<br/>at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+<br/>at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br/>at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+<br/>at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+<br/>at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:117)
+<br/>at org.testng.internal.Parameters.handleParameters(Parameters.java:426)
+<br/>at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
+<br/>at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
+<br/>at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
+<br/>at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+<br/>at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+<br/>at org.testng.TestRunner.privateRun(TestRunner.java:767)
+<br/>at org.testng.TestRunner.run(TestRunner.java:617)
+<br/>at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+<br/>at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+<br/>at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+<br/>at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+<br/>at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+<br/>at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+<br/>at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+<br/>at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+<br/>at org.testng.TestNG.run(TestNG.java:1031)
+<br/>at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+<br/>at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+<br/>at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+<br/>1 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>Testing Chain of Functions SignUp and SignIn</h1>
+<h2 id="m19">testCases.SignUpAndSignInTest:SignIn</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[aravind, raj, 123456789, aravinu19@gmail.com, example addr1, example addr1, villupuram, TAMIL NADU, 605602, INDIA, null, null]</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>JSON format error: array with name &quot;value&quot; must contain only strings (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;
+System info: host: &apos;DESKTOP-O8T4ONJ&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {InPrivate: false, acceptSslCerts: true, applicationCacheEnabled: true, browserName: MicrosoftEdge, browserVersion: 42.17134.1.0, javascriptEnabled: true, locationContextEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10, takesElementScreenshot: true, takesScreenshot: true, webStorageEnabled: true}
+Session ID: 6777A1D7-15BA-4BE3-B1A7-F33036A2E25B</p>
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+<br/>at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)
+<br/>at pageHandler.Page.loginPage(Page.java:62)
+<br/>at testCases.SignUpAndSignInTest.SignIn(SignUpAndSignInTest.java:49)
+<br/>25 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m20">testCases.SignUpAndSignInTest:SignIn</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[shawn, roger, 456789123, shawn53@gmail.com, example addr4, example addr4, Mountain View, California, 50008, united states, null, null]</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>JSON format error: array with name &quot;value&quot; must contain only strings (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;
+System info: host: &apos;DESKTOP-O8T4ONJ&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {InPrivate: false, acceptSslCerts: true, applicationCacheEnabled: true, browserName: MicrosoftEdge, browserVersion: 42.17134.1.0, javascriptEnabled: true, locationContextEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10, takesElementScreenshot: true, takesScreenshot: true, webStorageEnabled: true}
+Session ID: 6777A1D7-15BA-4BE3-B1A7-F33036A2E25B</p>
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+<br/>at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)
+<br/>at pageHandler.Page.loginPage(Page.java:62)
+<br/>at testCases.SignUpAndSignInTest.SignIn(SignUpAndSignInTest.java:49)
+<br/>25 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m21">testCases.SignUpAndSignInTest:SignIn</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[arun, mach, 456123789, arunmach@gmail.com, example addr2, example addr2, Chennai, TAMIL NADU, 600002, INDIA, null, null]</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>JSON format error: array with name &quot;value&quot; must contain only strings (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;
+System info: host: &apos;DESKTOP-O8T4ONJ&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {InPrivate: false, acceptSslCerts: true, applicationCacheEnabled: true, browserName: MicrosoftEdge, browserVersion: 42.17134.1.0, javascriptEnabled: true, locationContextEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10, takesElementScreenshot: true, takesScreenshot: true, webStorageEnabled: true}
+Session ID: 6777A1D7-15BA-4BE3-B1A7-F33036A2E25B</p>
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+<br/>at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)
+<br/>at pageHandler.Page.loginPage(Page.java:62)
+<br/>at testCases.SignUpAndSignInTest.SignIn(SignUpAndSignInTest.java:49)
+<br/>25 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m22">testCases.SignUpAndSignInTest:SignIn</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[alexa, aws, 912345678, alexaAWS@gmail.com, example addr5, example addr5, vegas, vegas, 60002, United states, null, null]</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>JSON format error: array with name &quot;value&quot; must contain only strings (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;
+System info: host: &apos;DESKTOP-O8T4ONJ&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {InPrivate: false, acceptSslCerts: true, applicationCacheEnabled: true, browserName: MicrosoftEdge, browserVersion: 42.17134.1.0, javascriptEnabled: true, locationContextEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10, takesElementScreenshot: true, takesScreenshot: true, webStorageEnabled: true}
+Session ID: 6777A1D7-15BA-4BE3-B1A7-F33036A2E25B</p>
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+<br/>at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)
+<br/>at pageHandler.Page.loginPage(Page.java:62)
+<br/>at testCases.SignUpAndSignInTest.SignIn(SignUpAndSignInTest.java:49)
+<br/>25 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m23">testCases.SignUpAndSignInTest:SignIn</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[barath, kumar, 789123456, barath20@gmail.com, example addr3, example addr3, New york, New york, 40007, United States, null, null]</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>JSON format error: array with name &quot;value&quot; must contain only strings (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;
+System info: host: &apos;DESKTOP-O8T4ONJ&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {InPrivate: false, acceptSslCerts: true, applicationCacheEnabled: true, browserName: MicrosoftEdge, browserVersion: 42.17134.1.0, javascriptEnabled: true, locationContextEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10, takesElementScreenshot: true, takesScreenshot: true, webStorageEnabled: true}
+Session ID: 6777A1D7-15BA-4BE3-B1A7-F33036A2E25B</p>
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+<br/>at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)
+<br/>at pageHandler.Page.loginPage(Page.java:62)
+<br/>at testCases.SignUpAndSignInTest.SignIn(SignUpAndSignInTest.java:49)
+<br/>25 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m24">testCases.SignUpAndSignInTest:SignIn</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[aravind, raj, 123456789, aravi, example addr1, example addr1, villupuram, TAMIL NADU, 605602, INDIA, aravinu19@gmail.com, passwd1]</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>No such element (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;
+System info: host: &apos;DESKTOP-O8T4ONJ&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {InPrivate: false, acceptSslCerts: true, applicationCacheEnabled: true, browserName: MicrosoftEdge, browserVersion: 42.17134.1.0, javascriptEnabled: true, locationContextEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10, takesElementScreenshot: true, takesScreenshot: true, webStorageEnabled: true}
+Session ID: 6777A1D7-15BA-4BE3-B1A7-F33036A2E25B
+*** Element info: {Using=link text, value=SIGN-OFF}</p>
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+<br/>at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:376)
+<br/>at org.openqa.selenium.By$ByLinkText.findElement(By.java:220)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+<br/>at pageHandler.Page.loginPage(Page.java:67)
+<br/>at testCases.SignUpAndSignInTest.SignIn(SignUpAndSignInTest.java:49)
+<br/>25 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m25">testCases.SignUpAndSignInTest:SignIn</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[natasha, hike, 891234567, natashaHike, example addr6, example addr6, delhi, delhi, 607102, INDIA, natashaHike@gmail.com, passwd6]</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>No such element (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;
+System info: host: &apos;DESKTOP-O8T4ONJ&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {InPrivate: false, acceptSslCerts: true, applicationCacheEnabled: true, browserName: MicrosoftEdge, browserVersion: 42.17134.1.0, javascriptEnabled: true, locationContextEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10, takesElementScreenshot: true, takesScreenshot: true, webStorageEnabled: true}
+Session ID: 6777A1D7-15BA-4BE3-B1A7-F33036A2E25B
+*** Element info: {Using=link text, value=SIGN-OFF}</p>
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+<br/>at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:376)
+<br/>at org.openqa.selenium.By$ByLinkText.findElement(By.java:220)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+<br/>at pageHandler.Page.loginPage(Page.java:67)
+<br/>at testCases.SignUpAndSignInTest.SignIn(SignUpAndSignInTest.java:49)
+<br/>25 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m26">testCases.SignUpAndSignInTest:SignIn</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[barath, kumar, 789123456, barath20, example addr3, example addr3, New york, New york, 40007, United States, barath20@gmail.com, passwd3]</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>No such element (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;
+System info: host: &apos;DESKTOP-O8T4ONJ&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {InPrivate: false, acceptSslCerts: true, applicationCacheEnabled: true, browserName: MicrosoftEdge, browserVersion: 42.17134.1.0, javascriptEnabled: true, locationContextEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10, takesElementScreenshot: true, takesScreenshot: true, webStorageEnabled: true}
+Session ID: 6777A1D7-15BA-4BE3-B1A7-F33036A2E25B
+*** Element info: {Using=link text, value=SIGN-OFF}</p>
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+<br/>at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:376)
+<br/>at org.openqa.selenium.By$ByLinkText.findElement(By.java:220)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+<br/>at pageHandler.Page.loginPage(Page.java:67)
+<br/>at testCases.SignUpAndSignInTest.SignIn(SignUpAndSignInTest.java:49)
+<br/>25 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m27">testCases.SignUpAndSignInTest:SignUp</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[natasha, hike, 891234567, natashaHike, example addr6, example addr6, delhi, delhi, 607102, INDIA, natashaHike@gmail.com, passwd6]</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at org.testng.Assert.assertTrue(Assert.java:52)
+<br/>at pageHandler.Page.registrationPage(Page.java:108)
+<br/>at testCases.SignUpAndSignInTest.SignUp(SignUpAndSignInTest.java:40)
+<br/>25 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m28">testCases.SignUpAndSignInTest:SignIn</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[natasha, hike, 891234567, natashaHike@gmail.com, example addr6, example addr6, delhi, delhi, 607102, INDIA, null, null]</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>JSON format error: array with name &quot;value&quot; must contain only strings (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;
+System info: host: &apos;DESKTOP-O8T4ONJ&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {InPrivate: false, acceptSslCerts: true, applicationCacheEnabled: true, browserName: MicrosoftEdge, browserVersion: 42.17134.1.0, javascriptEnabled: true, locationContextEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10, takesElementScreenshot: true, takesScreenshot: true, webStorageEnabled: true}
+Session ID: 6777A1D7-15BA-4BE3-B1A7-F33036A2E25B</p>
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+<br/>at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)
+<br/>at pageHandler.Page.loginPage(Page.java:62)
+<br/>at testCases.SignUpAndSignInTest.SignIn(SignUpAndSignInTest.java:49)
+<br/>25 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m29">testCases.SignUpAndSignInTest:SignIn</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[arun, mach, 456123789, arunmach, example addr2, example addr2, Chennai, TAMIL NADU, 600002, INDIA, arunmach@gmail.com, passwd2]</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>No such element (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;
+System info: host: &apos;DESKTOP-O8T4ONJ&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {InPrivate: false, acceptSslCerts: true, applicationCacheEnabled: true, browserName: MicrosoftEdge, browserVersion: 42.17134.1.0, javascriptEnabled: true, locationContextEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10, takesElementScreenshot: true, takesScreenshot: true, webStorageEnabled: true}
+Session ID: 6777A1D7-15BA-4BE3-B1A7-F33036A2E25B
+*** Element info: {Using=link text, value=SIGN-OFF}</p>
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+<br/>at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:376)
+<br/>at org.openqa.selenium.By$ByLinkText.findElement(By.java:220)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+<br/>at pageHandler.Page.loginPage(Page.java:67)
+<br/>at testCases.SignUpAndSignInTest.SignIn(SignUpAndSignInTest.java:49)
+<br/>25 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m30">testCases.SignUpAndSignInTest:SignUp</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[arun, mach, 456123789, arunmach@gmail.com, example addr2, example addr2, Chennai, TAMIL NADU, 600002, INDIA, null, null]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m31">testCases.SignUpAndSignInTest:SignIn</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[shawn, roger, 456789123, shawn53, example addr4, example addr4, Mountain View, California, 50008, united states, shawn53@gmail.com, passwd4]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m32">testCases.SignUpAndSignInTest:SignUp</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[barath, kumar, 789123456, barath20@gmail.com, example addr3, example addr3, New york, New york, 40007, United States, null, null]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m33">testCases.SignUpAndSignInTest:SignUp</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[aravind, raj, 123456789, aravinu19@gmail.com, example addr1, example addr1, villupuram, TAMIL NADU, 605602, INDIA, null, null]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m34">testCases.SignUpAndSignInTest:SignUp</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[aravind, raj, 123456789, aravi, example addr1, example addr1, villupuram, TAMIL NADU, 605602, INDIA, aravinu19@gmail.com, passwd1]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m35">testCases.SignUpAndSignInTest:SignUp</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[alexa, aws, 912345678, alexaAWS, example addr5, example addr5, vegas, vegas, 60002, United states, alexaAWS@gmail.com, passwd5]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m36">testCases.SignUpAndSignInTest:SignUp</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[arun, mach, 456123789, arunmach, example addr2, example addr2, Chennai, TAMIL NADU, 600002, INDIA, arunmach@gmail.com, passwd2]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m37">testCases.SignUpAndSignInTest:SignUp</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[alexa, aws, 912345678, alexaAWS@gmail.com, example addr5, example addr5, vegas, vegas, 60002, United states, null, null]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m38">testCases.SignUpAndSignInTest:SignUp</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[natasha, hike, 891234567, natashaHike@gmail.com, example addr6, example addr6, delhi, delhi, 607102, INDIA, null, null]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m39">testCases.SignUpAndSignInTest:SignUp</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[shawn, roger, 456789123, shawn53@gmail.com, example addr4, example addr4, Mountain View, California, 50008, united states, null, null]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m40">testCases.SignUpAndSignInTest:SignUp</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[shawn, roger, 456789123, shawn53, example addr4, example addr4, Mountain View, California, 50008, united states, shawn53@gmail.com, passwd4]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m41">testCases.SignUpAndSignInTest:SignUp</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[barath, kumar, 789123456, barath20, example addr3, example addr3, New york, New york, 40007, United States, barath20@gmail.com, passwd3]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m42">testCases.SignUpAndSignInTest:SignIn</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[alexa, aws, 912345678, alexaAWS, example addr5, example addr5, vegas, vegas, 60002, United states, alexaAWS@gmail.com, passwd5]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>Testing Chain of Functions Reservation and Cancellation</h1>
+<h2 id="m43">testCases.ReservationAndCancellationTest:ReservationAndCancellation</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[round, 4, seattle, november, 20, Frankfart, december, 10, Business, Pangea airlines, 274, 270, Aravind, RaJ, Hindu, barath, raj, Diabetic, arun, mach, Kosher, alexa, aws, Bland, Carte Blanche, 187745551221, 10, 2004, natasha, hike, indi, example addr6, example addr6, delhi, delhi, 607102, INDIA, example addr6, example addr6, delhi, delhi, 607102, INDIA]</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>No such driver (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;
+System info: host: &apos;DESKTOP-O8T4ONJ&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {InPrivate: false, acceptSslCerts: true, applicationCacheEnabled: true, browserName: MicrosoftEdge, browserVersion: 42.17134.1.0, javascriptEnabled: true, locationContextEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10, takesElementScreenshot: true, takesScreenshot: true, webStorageEnabled: true}
+Session ID: 239664D5-8DDE-4D90-9CA4-AA9D20F7A4F9</p>
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+<br/>at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:294)
+<br/>at supportUtilities.SnapShot.takeSnap(SnapShot.java:17)
+<br/>at pageHandler.Page.flightReservation(Page.java:355)
+<br/>at testCases.ReservationAndCancellationTest.ReservationAndCancellation(ReservationAndCancellationTest.java:30)
+<br/>25 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m44">testCases.ReservationAndCancellationTest:ReservationAndCancellation</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[one, 1, London, may, 20, new york, june, 15, economy, blue skies airlines, 271, 282, Aravind, RaJ, Hindu, null, null, null, null, null, null, null, null, null, American Express, 95555551221, 08, 2009, aravind,  , raj, example addr1, example addr1, villupuram, TAMIL NADU, 605602, INDIA, example addr1, example addr1, villupuram, TAMIL NADU, 605602, INDIA]</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>No such driver (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;
+System info: host: &apos;DESKTOP-O8T4ONJ&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {InPrivate: false, acceptSslCerts: true, applicationCacheEnabled: true, browserName: MicrosoftEdge, browserVersion: 42.17134.1.0, javascriptEnabled: true, locationContextEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10, takesElementScreenshot: true, takesScreenshot: true, webStorageEnabled: true}
+Session ID: 239664D5-8DDE-4D90-9CA4-AA9D20F7A4F9</p>
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+<br/>at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:294)
+<br/>at supportUtilities.SnapShot.takeSnap(SnapShot.java:17)
+<br/>at pageHandler.Page.cancelReservation(Page.java:402)
+<br/>at testCases.ReservationAndCancellationTest.ReservationAndCancellation(ReservationAndCancellationTest.java:31)
+<br/>25 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m45">testCases.ReservationAndCancellationTest:ReservationAndCancellation</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[round, 2, new york, march, 21, london, april, 16, First, unified airlines, 270, 303, Aravind, RaJ, Hindu, barath, raj, Diabetic, null, null, null, null, null, null, MasterCard, 95666661221, 09, 2008, arun, mach, raj, example addr2, example addr2, Chennai, TAMIL NADU, 600002, INDIA, example addr2, example addr2, Chennai, TAMIL NADU, 600002, INDIA]</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>No such driver (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;
+System info: host: &apos;DESKTOP-O8T4ONJ&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {InPrivate: false, acceptSslCerts: true, applicationCacheEnabled: true, browserName: MicrosoftEdge, browserVersion: 42.17134.1.0, javascriptEnabled: true, locationContextEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10, takesElementScreenshot: true, takesScreenshot: true, webStorageEnabled: true}
+Session ID: 239664D5-8DDE-4D90-9CA4-AA9D20F7A4F9</p>
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+<br/>at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:294)
+<br/>at supportUtilities.SnapShot.takeSnap(SnapShot.java:17)
+<br/>at pageHandler.Page.flightReservation(Page.java:355)
+<br/>at testCases.ReservationAndCancellationTest.ReservationAndCancellation(ReservationAndCancellationTest.java:30)
+<br/>25 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m46">testCases.ReservationAndCancellationTest:ReservationAndCancellation</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[one, 3, London, july, 25, seattle, august, 20, first, unified airlines, 271, 282, Aravind, RaJ, Hindu, arun, mach, Kosher, alexa, aws, Bland, null, null, null, Diners Club, 65512051221, 07, 2005, alexa, amazon, aws, example addr5, example addr5, vegas, vegas, 60002, United states, example addr5, example addr5, vegas, vegas, 60002, United states]</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>No such driver (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;
+System info: host: &apos;DESKTOP-O8T4ONJ&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {InPrivate: false, acceptSslCerts: true, applicationCacheEnabled: true, browserName: MicrosoftEdge, browserVersion: 42.17134.1.0, javascriptEnabled: true, locationContextEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10, takesElementScreenshot: true, takesScreenshot: true, webStorageEnabled: true}
+Session ID: 239664D5-8DDE-4D90-9CA4-AA9D20F7A4F9</p>
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+<br/>at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:294)
+<br/>at supportUtilities.SnapShot.takeSnap(SnapShot.java:17)
+<br/>at pageHandler.Page.flightReservation(Page.java:355)
+<br/>at testCases.ReservationAndCancellationTest.ReservationAndCancellation(ReservationAndCancellationTest.java:30)
+<br/>25 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m47">testCases.ReservationAndCancellationTest:ReservationAndCancellation</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[round, 1, seattle, june, 10, new york, june, 12, economy, blue skies airlines, 281, 273, Aravind, RaJ, Hindu, null, null, null, null, null, null, null, null, null, Discover, 75521151221, 06, 2006, barath, marvelo, raj, example addr4, example addr4, Mountain View, California, 50008, united states, example addr4, example addr4, Mountain View, California, 50008, united states]</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>No such driver (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;
+System info: host: &apos;DESKTOP-O8T4ONJ&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {InPrivate: false, acceptSslCerts: true, applicationCacheEnabled: true, browserName: MicrosoftEdge, browserVersion: 42.17134.1.0, javascriptEnabled: true, locationContextEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10, takesElementScreenshot: true, takesScreenshot: true, webStorageEnabled: true}
+Session ID: 239664D5-8DDE-4D90-9CA4-AA9D20F7A4F9</p>
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+<br/>at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:294)
+<br/>at supportUtilities.SnapShot.takeSnap(SnapShot.java:17)
+<br/>at pageHandler.Page.flightReservation(Page.java:355)
+<br/>at testCases.ReservationAndCancellationTest.ReservationAndCancellation(ReservationAndCancellationTest.java:30)
+<br/>25 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m48">testCases.ReservationAndCancellationTest:ReservationAndCancellation</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[one, 3, paris, april, 22, new york, may, 18, Business, Pangea airlines, 274, 282, Aravind, RaJ, Hindu, arun, mach, Kosher, alexa, aws, Bland, null, null, null, Visa, 911111551221, 05, 2007, shawn, sho, roger, example addr3, example addr3, New york, New york, 40007, United States, example addr3, example addr3, New york, New york, 40007, United States]</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>No such driver (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;
+System info: host: &apos;DESKTOP-O8T4ONJ&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {InPrivate: false, acceptSslCerts: true, applicationCacheEnabled: true, browserName: MicrosoftEdge, browserVersion: 42.17134.1.0, javascriptEnabled: true, locationContextEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10, takesElementScreenshot: true, takesScreenshot: true, webStorageEnabled: true}
+Session ID: 239664D5-8DDE-4D90-9CA4-AA9D20F7A4F9</p>
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+<br/>at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:294)
+<br/>at supportUtilities.SnapShot.takeSnap(SnapShot.java:17)
+<br/>at pageHandler.Page.flightReservation(Page.java:355)
+<br/>at testCases.ReservationAndCancellationTest.ReservationAndCancellation(ReservationAndCancellationTest.java:30)
+<br/>25 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>

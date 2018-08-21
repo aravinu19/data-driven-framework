@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="Failed suite [EnQuodeTestSuite]">
+  <test parallel="none" name="Test For Broken Links(failed)">
+    <classes>
+      <class name="testCases.logInTest">
+        <methods>
+          <include name="cleanUp"/>
+        </methods>
+      </class> <!-- testCases.logInTest -->
+      <class name="testCases.SignUpAndSignInTest">
+        <methods>
+          <include name="start"/>
+          <include name="cleanUp"/>
+        </methods>
+      </class> <!-- testCases.SignUpAndSignInTest -->
+      <class name="testCases.SiteNavigationTest">
+        <methods>
+          <include name="HotelsLink"/>
+          <include name="ItineraryPage"/>
+          <include name="CruisesLink"/>
+          <include name="VacationsLink"/>
+          <include name="ContactLink"/>
+          <include name="SupportLink"/>
+          <include name="ProfilePage"/>
+          <include name="HomeLink"/>
+          <include name="DestinationsLink"/>
+          <include name="CarRentalsLink"/>
+          <include name="FlightsLink"/>
+          <include name="RegistrationLink"/>
+          <include name="beginTest"/>
+        </methods>
+      </class> <!-- testCases.SiteNavigationTest -->
+      <class name="testCases.ReservationAndCancellationTest">
+        <methods>
+          <include name="cleanUp"/>
+          <include name="testPreparations"/>
+        </methods>
+      </class> <!-- testCases.ReservationAndCancellationTest -->
+    </classes>
+  </test> <!-- Test For Broken Links(failed) -->
+  <test parallel="none" name="Testing Flight Cancelling Functionality(failed)">
+    <classes>
+      <class name="testCases.logInTest">
+        <methods>
+          <include name="cleanUp"/>
+        </methods>
+      </class> <!-- testCases.logInTest -->
+      <class name="testCases.SignUpAndSignInTest">
+        <methods>
+          <include name="start"/>
+          <include name="cleanUp"/>
+        </methods>
+      </class> <!-- testCases.SignUpAndSignInTest -->
+      <class name="testCases.CancellingReservationTest">
+        <methods>
+          <include name="Cancellation" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testCases.CancellingReservationTest -->
+      <class name="testCases.SiteNavigationTest">
+        <methods>
+          <include name="beginTest"/>
+        </methods>
+      </class> <!-- testCases.SiteNavigationTest -->
+      <class name="testCases.ReservationAndCancellationTest">
+        <methods>
+          <include name="cleanUp"/>
+          <include name="testPreparations"/>
+        </methods>
+      </class> <!-- testCases.ReservationAndCancellationTest -->
+    </classes>
+  </test> <!-- Testing Flight Cancelling Functionality(failed) -->
+  <test parallel="none" name="Testing LogIn Functionality(failed)">
+    <classes>
+      <class name="testCases.logInTest">
+        <methods>
+          <include name="cleanUp"/>
+          <include name="logIn"/>
+        </methods>
+      </class> <!-- testCases.logInTest -->
+      <class name="testCases.SignUpAndSignInTest">
+        <methods>
+          <include name="start"/>
+          <include name="cleanUp"/>
+        </methods>
+      </class> <!-- testCases.SignUpAndSignInTest -->
+      <class name="testCases.SiteNavigationTest">
+        <methods>
+          <include name="beginTest"/>
+        </methods>
+      </class> <!-- testCases.SiteNavigationTest -->
+      <class name="testCases.ReservationAndCancellationTest">
+        <methods>
+          <include name="cleanUp"/>
+          <include name="testPreparations"/>
+        </methods>
+      </class> <!-- testCases.ReservationAndCancellationTest -->
+    </classes>
+  </test> <!-- Testing LogIn Functionality(failed) -->
+  <test parallel="none" name="Testing Registration Functionality(failed)">
+    <classes>
+      <class name="testCases.logInTest">
+        <methods>
+          <include name="cleanUp"/>
+        </methods>
+      </class> <!-- testCases.logInTest -->
+      <class name="testCases.SignUpAndSignInTest">
+        <methods>
+          <include name="start"/>
+          <include name="cleanUp"/>
+        </methods>
+      </class> <!-- testCases.SignUpAndSignInTest -->
+      <class name="testCases.SiteNavigationTest">
+        <methods>
+          <include name="beginTest"/>
+        </methods>
+      </class> <!-- testCases.SiteNavigationTest -->
+      <class name="testCases.ReservationAndCancellationTest">
+        <methods>
+          <include name="cleanUp"/>
+          <include name="testPreparations"/>
+        </methods>
+      </class> <!-- testCases.ReservationAndCancellationTest -->
+      <class name="testCases.RegistrationTest">
+        <methods>
+          <include name="Register"/>
+        </methods>
+      </class> <!-- testCases.RegistrationTest -->
+    </classes>
+  </test> <!-- Testing Registration Functionality(failed) -->
+  <test parallel="none" name="Testing Flight Reservation Functionality(failed)">
+    <classes>
+      <class name="testCases.logInTest">
+        <methods>
+          <include name="cleanUp"/>
+        </methods>
+      </class> <!-- testCases.logInTest -->
+      <class name="testCases.SignUpAndSignInTest">
+        <methods>
+          <include name="start"/>
+          <include name="cleanUp"/>
+        </methods>
+      </class> <!-- testCases.SignUpAndSignInTest -->
+      <class name="testCases.SiteNavigationTest">
+        <methods>
+          <include name="beginTest"/>
+        </methods>
+      </class> <!-- testCases.SiteNavigationTest -->
+      <class name="testCases.FlightReservationTest">
+        <methods>
+          <include name="Reservation"/>
+        </methods>
+      </class> <!-- testCases.FlightReservationTest -->
+      <class name="testCases.ReservationAndCancellationTest">
+        <methods>
+          <include name="cleanUp"/>
+          <include name="testPreparations"/>
+        </methods>
+      </class> <!-- testCases.ReservationAndCancellationTest -->
+    </classes>
+  </test> <!-- Testing Flight Reservation Functionality(failed) -->
+  <test parallel="none" name="Testing Chain of Functions SignUp and SignIn(failed)">
+    <classes>
+      <class name="testCases.logInTest">
+        <methods>
+          <include name="cleanUp"/>
+        </methods>
+      </class> <!-- testCases.logInTest -->
+      <class name="testCases.SignUpAndSignInTest">
+        <methods>
+          <include name="SignIn" invocation-numbers="0 1 2 5 6 7 8 9 10 11"/>
+          <include name="start"/>
+          <include name="cleanUp"/>
+          <include name="SignUp" invocation-numbers="5"/>
+        </methods>
+      </class> <!-- testCases.SignUpAndSignInTest -->
+      <class name="testCases.SiteNavigationTest">
+        <methods>
+          <include name="beginTest"/>
+        </methods>
+      </class> <!-- testCases.SiteNavigationTest -->
+      <class name="testCases.ReservationAndCancellationTest">
+        <methods>
+          <include name="cleanUp"/>
+          <include name="testPreparations"/>
+        </methods>
+      </class> <!-- testCases.ReservationAndCancellationTest -->
+    </classes>
+  </test> <!-- Testing Chain of Functions SignUp and SignIn(failed) -->
+  <test parallel="none" name="Testing Chain of Functions Reservation and Cancellation(failed)">
+    <classes>
+      <class name="testCases.logInTest">
+        <methods>
+          <include name="cleanUp"/>
+        </methods>
+      </class> <!-- testCases.logInTest -->
+      <class name="testCases.SignUpAndSignInTest">
+        <methods>
+          <include name="start"/>
+          <include name="cleanUp"/>
+        </methods>
+      </class> <!-- testCases.SignUpAndSignInTest -->
+      <class name="testCases.SiteNavigationTest">
+        <methods>
+          <include name="beginTest"/>
+        </methods>
+      </class> <!-- testCases.SiteNavigationTest -->
+      <class name="testCases.ReservationAndCancellationTest">
+        <methods>
+          <include name="cleanUp"/>
+          <include name="ReservationAndCancellation" invocation-numbers="0 1 2 3 4 5"/>
+          <include name="testPreparations"/>
+        </methods>
+      </class> <!-- testCases.ReservationAndCancellationTest -->
+    </classes>
+  </test> <!-- Testing Chain of Functions Reservation and Cancellation(failed) -->
+</suite> <!-- Failed suite [EnQuodeTestSuite] -->

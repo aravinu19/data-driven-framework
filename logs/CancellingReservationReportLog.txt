@@ -1,0 +1,11 @@
+	Cancelling Reservation Report Log - 2018-08-01 18:13:46.442
+
+
+Test Name : Cancellation
+Method Parameters : [Ljava.lang.Object;@64a9d48c
+Test Result : FAILED
+Error : None
+
+
+
+	 Log end at 2018-08-01 18:13:46.642
